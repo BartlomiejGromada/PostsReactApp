@@ -1,0 +1,10 @@
+.root {
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
