@@ -1,85 +1,86 @@
 .post {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    min-height: 15rem;
-    max-width: 50rem;
-    background-color: #fff;
-    border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  min-height: 15rem;
+  max-width: 50rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  color: #111;
 }
 
 .title {
-    width: 100%;
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
-    background-color: #001C55;
+  width: 100%;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #001c55;
 }
 
 .titleText {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .body {
-    padding: 0 2rem;
+  padding: 0 2rem;
 }
 
 .details {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 90%;
-    flex-wrap: wrap;
-    padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  flex-wrap: wrap;
+  padding: 2rem;
 }
 
 .tags {
-    flex: 2;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .tag {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 .tagIcon {
-    width: 1.2rem;
-    height: 1.2rem;
-    fill: #001C55;
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: #001c55;
 }
 
 .tagName {
-    border-radius: 1rem;
-    padding: 0.4rem;
-    background-color: #001C55;
-    color: #fff;
-    min-width: 5rem;
+  border-radius: 1rem;
+  padding: 0.4rem;
+  background-color: #001c55;
+  color: #fff;
+  min-width: 5rem;
 }
 
 .reactions {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 0.5rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
 }
 
 .reactionIcon {
-    width: 1.5rem;
-    height: 1.5rem;
-    fill: #001C55;
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #001c55;
 }
 
 .reactionNumber {
-    font-weight: bold;
+  font-weight: bold;
 }

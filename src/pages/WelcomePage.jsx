@@ -1,7 +1,17 @@
-const WelcomePage = () => {
-    return (
-        <div><p style={{ color: "red" }}>Welcome - page</p></div>
-    )
-}
+import ReactRouterImage from "@assets/images/react-router.png";
 
-export default WelcomePage
+const WelcomePage = () => {
+  return (
+    <>
+      <h3>Welcome page</h3>
+      <p>Example project with React Router @6.4</p>
+      <img
+        src={ReactRouterImage}
+        alt="react router logo"
+        id="react-router-logo"
+      />
+    </>
+  );
+};
+
+export default WelcomePage;

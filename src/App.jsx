@@ -1,9 +1,18 @@
 import RootLayout from "@components/layout";
+import AboutPage from "@pages/AboutPage";
 import ErrorPage from "@pages/ErrorPage";
-import PostDetailPage, { loader as postDetailLoader } from "@pages/PostDetailPage";
+import NewPostPage, { action as newPostAction } from "@pages/NewPostPage";
+import PostDetailPage, {
+  loader as postDetailLoader,
+} from "@pages/PostDetailPage";
 import PostsPage, { loader as postsLoader } from "@pages/PostsPage";
 import WelcomePage from "@pages/WelcomePage";
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 import "./App.css";
 
 const router = createBrowserRouter(
@@ -11,16 +20,23 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
       <Route index element={<WelcomePage />} />
       <Route path="/posts" element={<PostsPage />} loader={postsLoader} />
-      <Route path="/posts/:id" element={<PostDetailPage />} loader={postDetailLoader} />
-      <Route path="/about" element={<p>Bartłomiej Gromada</p>} />
+      <Route
+        path="/posts/:id"
+        element={<PostDetailPage />}
+        loader={postDetailLoader}
+      />
+      <Route path="/about" element={<AboutPage />} />
+      <Route
+        path="/new-post"
+        element={<NewPostPage />}
+        action={newPostAction}
+      />
     </Route>
   )
 );
 
 const App = () => {
-  return (
-    <RouterProvider router={router} />
-  )
+  return <RouterProvider router={router} />;
 };
 
 export default App;

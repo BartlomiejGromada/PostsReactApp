@@ -1,21 +1,29 @@
+import { Spinner } from "@components/ui";
 import { PostDetail } from "@features/postDetail";
-import { useLoaderData } from "react-router-dom";
+import { getPost } from "@utils/api";
+import { Suspense } from "react";
+import { Await, defer, useLoaderData } from "react-router-dom";
 
 const PostDetailPage = () => {
-    const loadedData = useLoaderData();
+  const loadedData = useLoaderData();
 
-    return (
-        <PostDetail post={loadedData} />
-    )
+  return (
+    <>
+      <h3>Post</h3>
+      <Suspense fallback={<Spinner />}>
+        <Await
+          resolve={loadedData.post}
+          errorElement={<p>Something gone wrong!</p>}
+        >
+          {(loadedPost) => <PostDetail post={loadedPost} />}
+        </Await>
+      </Suspense>
+    </>
+  );
 };
 
 export default PostDetailPage;
 
 export const loader = async ({ params }) => {
-    const postId = params.id;
-    const response = await fetch(`https://dummyjson.com/posts/${postId}`);
-    if (!response.ok) {
-        throw { message: "Failed to fetch post", status: 500 };
-    }
-    return response.json();
+  return defer({ post: getPost(params.id) });
 };

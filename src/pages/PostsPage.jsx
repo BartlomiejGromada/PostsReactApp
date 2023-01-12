@@ -1,21 +1,32 @@
-import React from 'react'
-import { PostsList } from '@features/Posts';
-import { useLoaderData } from 'react-router-dom';
+import { Button, Spinner } from "@components/ui";
+import { PostsList } from "@features/Posts";
+import { getPosts } from "@utils/api";
+import { Suspense } from "react";
+import { Await, defer, Link, useLoaderData } from "react-router-dom";
 
 const PostsPage = () => {
-    const loaderData = useLoaderData();
+  const loaderData = useLoaderData();
 
-    return (
-        <PostsList postsList={loaderData} />
-    );
+  return (
+    <>
+      <Link to="/new-post">
+        <Button>Add post</Button>
+      </Link>
+      <h3>Our posts</h3>
+      <Suspense fallback={<Spinner />}>
+        <Await
+          resolve={loaderData.posts}
+          errorElement={<p>Something gone wrong!</p>}
+        >
+          {(loadedPosts) => <PostsList postsList={loadedPosts} />}
+        </Await>
+      </Suspense>
+    </>
+  );
 };
 
 export default PostsPage;
 
 export const loader = async () => {
-    const response = await fetch("https://dummyjson.com/posts?limit=5");
-    if (!response.ok) {
-        throw { message: "Failed to fetch posts", status: 500 };
-    }
-    return response.json();
+  return defer({ posts: getPosts() });
 };

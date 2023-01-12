@@ -7,6 +7,7 @@ const NavBarItem = ({ navbarItem }) => {
             to={navbarItem.url}
             key={navbarItem.id}
             className={({ isActive }) => isActive ? styles.activeLink : styles.link}
+            end={navbarItem.url === "/" ? true : false}
         >
             <div>
                 {navbarItem.name}

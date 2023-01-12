@@ -1,0 +1,59 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 20rem;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+fieldset > label {
+  text-align: center;
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+  color: #183384;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  width: 15rem;
+  height: 2rem;
+  font: inherit;
+}
+
+input:focus,
+textarea:focus {
+  border: 0.18rem solid #183384;
+}
+
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  font: inherit;
+  padding: 0.5rem;
+  width: 15rem;
+  border-radius: 1rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.button {
+  align-self: flex-start;
+  min-width: 5rem;
+  width: max-content;
+}

@@ -7,10 +7,19 @@
 body {
     background-color: #69c0e6;
     height: 100vh;
+    color: #fff;
 }
 
 a {
     text-decoration: none;
+}
+
+h3 {
+    font-size: 3rem;
+    color: #fff;
+    -webkit-text-stroke-width: 0.01rem;
+    -webkit-text-stroke-color: black;
+    margin-bottom: 2rem;
 }
 
 #error-content {
@@ -24,4 +33,14 @@ a {
     font-size: 1.5rem;
     -webkit-text-stroke-width: 0.01rem;
     -webkit-text-stroke-color: black;
+}
+
+#react-router-logo {
+    width: 25rem;
+    height: 20rem;
+    object-fit: contain;
+}
+
+#container {
+    margin-bottom: 1rem;
 }

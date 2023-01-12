@@ -1,22 +1,23 @@
-.link, .activeLink {
-    width: 100px;
-    text-decoration: none;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+.link,
+.activeLink {
+  width: 100px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
 
 .activeLink {
-    color: #0A2472;
+  color: #0a2472;
 }
 
 .link:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .activeLink::before {
-    content: "•";
-    margin-right: 0.2em;
+  content: "•";
+  margin-right: 0.2em;
 }

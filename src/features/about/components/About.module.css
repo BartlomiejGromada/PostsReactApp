@@ -1,0 +1,42 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.about p {
+    font-size: 1.5rem;
+    color: #0A2472;
+}
+
+.socials {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.github {
+    width: 4.5rem;
+    height: 4.5rem;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+}
+
+.github:hover {
+    transform: scale(1.2);
+}
+
+.linkedin {
+    width: 5rem;
+    height: 5rem;
+    fill: #fff;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+}
+
+.linkedin:hover {
+    transform: scale(1.2);
+}
